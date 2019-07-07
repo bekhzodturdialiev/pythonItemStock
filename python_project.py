@@ -1,6 +1,6 @@
 #I MADE SOME CHANGES HERE
 stock = {}
-
+#Read file
 with open('stock.txt') as fileobj:
   for line in fileobj:
       key, value = line.split(":")
