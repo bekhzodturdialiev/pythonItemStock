@@ -1,5 +1,6 @@
 
 stock = {}
+
 with open('stock.txt') as fileobj:
   for line in fileobj:
       key, value = line.split(":")
