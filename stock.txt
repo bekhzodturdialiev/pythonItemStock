@@ -1,0 +1,4 @@
+apples:9
+orange:5
+banana:7
+cheese:3
