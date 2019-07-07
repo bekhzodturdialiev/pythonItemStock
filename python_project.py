@@ -4,10 +4,13 @@
 
 stock = {}
 #Read file
-with open('stock.txt') as fileobj:
-  for line in fileobj:
-      key, value = line.split(":")
-      stock[key] = int(value)
+def read():
+    with open('stock.txt') as fileobj:
+        for line in fileobj:
+            key, value = line.split(":")
+            stock[key] = int(value)
+
+read()
 
 print("Hello and Welcome To The System!!")
 print("")
@@ -102,7 +105,6 @@ while True:
         run = options()
 
     elif run == 'q':
-        
         break
 
     else:
