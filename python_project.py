@@ -1,4 +1,5 @@
 #I MADE SOME CHANGES HERE
+# I MADE SECOND CHANGE HERE
 stock = {}
 #Read file
 with open('stock.txt') as fileobj:
