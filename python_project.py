@@ -1,9 +1,5 @@
-#I MADE SOME CHANGES HERE
-
-# I MADE THIRD CHANGE HERE
-
-
 stock = {}
+
 #Read file
 def read():
     with open('stock.txt') as fileobj:
@@ -33,8 +29,6 @@ def write():
 print("List of the current stock:")
 for key, value in stock.items():
     print("{}: {}".format(key, value))
-# for stocks in stock_file.readlines():
-#     print("{}".format(stocks))
 print("")
 run = options()
 
