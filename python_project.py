@@ -38,17 +38,17 @@ while True:
     if run == '1':
         print("")
         addStock = input('Add item: ').lower()
+        amount = int(input('Qty: '))
         try:
-            amount = int(input('Qty: '))
             if addStock in stock:
                 prevAmount = stock[addStock]
                 amount += prevAmount
 
             stock[addStock] = amount
-            print('{}{}'.format(addStock, " has been added to the stock"))
-            print('{}{}\n'.format("The available stock is ", amount))
-            run = options()
+            print('{} {}{}'.format(amount - prevAmount, addStock, " has been added to the stock"))
+            print('{}{}\n'.format("The available stock is now", amount))
 
+            run = options()
             write()
 
         except ValueError:
@@ -57,8 +57,8 @@ while True:
     elif run == '2':
         print("")
         removeStock = input('Remove item: ').lower()
+        amount = int(input('Qty: '))
         try:
-            amount = int(input('Qty: '))
             if removeStock in stock:
                 prevAmount = stock[removeStock]
                 if prevAmount == 0:
@@ -73,8 +73,8 @@ while True:
             else:
                 print('\n{}{}'.format(removeStock, " is not in stock"))
 
-            print('{}{}'.format(removeStock, " has been removed from the stock"))
-            print('{}{}\n'.format("The available stock is ", amount))
+            print('{} {}{}'.format(prevAmount - amount, removeStock, " has been removed from the stock"))
+            print('{}{}\n'.format("The available stock is now ", amount))
             run = options()
 
             write()
