@@ -1,6 +1,6 @@
-apples:9
-orange:5
-banana:7
-cheese:3
-bacon:9
-asd:2
+apples:5
+banana:5
+cheese:2
+bacon:7
+fanta:1
+coke:2

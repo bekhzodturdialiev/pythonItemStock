@@ -1,6 +1,6 @@
 stock = {}
 
-#Read file
+# Read file
 def read():
     with open('stock.txt') as fileobj:
         for line in fileobj:
@@ -21,10 +21,11 @@ def options():
     return input("What would you like to do? ")
 
 def write():
-    f = open("stock.txt","w")
-    for i in stock :
-        f.write( "{}:{}\n".format(i, stock[i]) )
+    f = open("stock.txt", "w")
+    for i in stock:
+        f.write("{}:{}\n".format(i, stock[i]))
     f.close()
+
 
 print("List of the current stock:")
 for key, value in stock.items():
@@ -44,7 +45,8 @@ while True:
                 amount += prevAmount
 
             stock[addStock] = amount
-            print("")
+            print('{}{}'.format(addStock, " has been added to the stock"))
+            print('{}{}\n'.format("The available stock is ", amount))
             run = options()
 
             write()
@@ -68,32 +70,31 @@ while True:
                 else:
                     amount = prevAmount-amount
                     stock[removeStock] = amount
-
             else:
                 print('\n{}{}'.format(removeStock, " is not in stock"))
 
-            print("")
+            print('{}{}'.format(removeStock, " has been removed from the stock"))
+            print('{}{}\n'.format("The available stock is ", amount))
             run = options()
 
             write()
-            
+
         except ValueError:
             print("Please enter a number")
 
-    elif run =='d':
+    elif run == 'd':
         print('')
         delStock = input('Delete item: ').lower()
-        if delStock in stock :
+        if delStock in stock:
             del stock[delStock]
-            print(delStock, " has been deleted\n")
+            print(delStock, "has been deleted\n")
         else:
             print('{}{}\n'.format(delStock, " is not in stock"))
         write()
         run = options()
 
-
     elif run == 'c':
-        print("")
+        print("\nList of the current stock:")
         for key, value in stock.items():
             print("{}: {}".format(key, value))
         print("")
