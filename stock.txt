@@ -1,4 +1,7 @@
-apples:9
-orange:5
-banana:7
-cheese:3
+apples:8
+banana:5
+cheese:0
+bacon:2
+fanta:5
+coke:8
+veggies:5
